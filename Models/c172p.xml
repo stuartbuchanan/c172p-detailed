@@ -5423,6 +5423,18 @@
 
   <!-- MOD: Pontoon Gear -->
   <animation>
+    <name>LeftFrontGearWheel</name>
+	<object-name>LAxle</object-name>
+    <object-name>LFrontWheel</object-name>
+  </animation>
+  
+  <animation>
+    <name>LeftFrontGearUpper</name>
+    <object-name>Lstrut.001</object-name>
+    <object-name>Lstrut.002</object-name>
+  </animation>
+  
+  <animation>
     <name>LeftFrontGear</name>
     <object-name>Lstrut.001</object-name>
     <object-name>Ldamper</object-name>
@@ -5430,20 +5442,9 @@
     <object-name>LFrontWheel</object-name>
   </animation>
 
-  <animation>
-    <name>RightFrontGear</name>
-    <object-name>Rstrut.001</object-name>
-    <object-name>Rdamper</object-name>
-	<object-name>RAxle</object-name>
-    <object-name>RFrontWheel</object-name>
-  </animation>
-
-  <!--    Retractable Gear    -->
-  <animation>
+<animation>
     <type>rotate</type>
-    <object-name>Ldamper</object-name>
-	<object-name>LAxle</object-name>
-    <object-name>LFrontWheel</object-name>
+    <object-name>LeftFrontGearWheel</object-name>
     <property alias="/params/gear-amphibious/front-left-compression-ft"/>
     <factor>8</factor>
     <center>
@@ -5458,7 +5459,39 @@
     </axis>
   </animation>
 
-  <animation>
+    <animation>
+        <type>locked-track</type>
+
+        <object-name>LeftFrontGearUpper</object-name>
+        <center>
+		    <x-m>-2.0235</x-m>
+		    <y-m>1.1453</y-m>
+		    <z-m>-1.5766</z-m>
+	    </center>
+	    <lock-axis>
+	        <x>0</x>
+	        <y>1</y>
+	        <z>0</z>
+	    </lock-axis>
+
+	    <target-name>LeftFrontGearWheel</target-name>
+	    <target-center>
+          <x-m>-2.0460</x-m>
+          <y-m>1.1453</y-m>
+          <z-m>-2.1417</z-m>
+        </target-center>
+
+	    <slave-name>Ldamper</slave-name>
+	    <slave-center>
+          <x-m>-2.1039</x-m>
+          <y-m>1.1453</y-m>
+          <z-m>-1.9698</z-m>
+        </slave-center>
+    </animation>
+
+  <!--    Retractable Gear    -->
+
+  <!--<animation>
     <type>translate</type>
     <object-name>LeftFrontGear</object-name>
     <property alias="/params/gear-amphibious/front-left-position-norm"/>
@@ -5508,6 +5541,14 @@
       <y>0</y>
       <z>0.940</z>
     </axis>
+  </animation>-->
+
+  <animation>
+    <name>RightFrontGear</name>
+    <object-name>Rstrut.001</object-name>
+    <object-name>Rdamper</object-name>
+	<object-name>RAxle</object-name>
+    <object-name>RFrontWheel</object-name>
   </animation>
 
   <animation>
@@ -5528,6 +5569,26 @@
       <z>0</z>
     </axis>
   </animation>
+
+  <animation>
+	<type>spin</type>
+	<object-name>LFrontWheel</object-name>
+	<property>gear/gear[19]/rollspeed-ms</property>
+	<factor>13</factor>
+	<axis>
+		<x>0</x>
+		<y>-1</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<!--<x-m>-2.0450</x-m>
+		<y-m>-1.0698</y-m>
+		<z-m>-2.1422</z-m>-->
+		<x-m>-2.0460</x-m>
+        <y-m>1.1453</y-m>
+        <z-m>-2.1417</z-m>
+	</center>
+ </animation>
 
   <animation>
     <type>translate</type>
@@ -5582,23 +5643,6 @@
   </animation>
 
  <!-- MOD: Spin to amphibious gears -->
- <animation>
-	<type>spin</type>
-	<object-name>LFrontWheel</object-name>
-	<property>gear/gear[19]/rollspeed-ms</property>
-	<factor>13</factor>
-	<axis>
-		<x>0</x>
-		<y>-1</y>
-		<z>0</z>
-	</axis>
-	<center>
-		<x-m>-2.0450</x-m>
-		<y-m>-1.0698</y-m>
-		<z-m>-2.1422</z-m>
-	</center>
- </animation>
-
  <animation>
 	<type>spin</type>
 	<object-name>RFrontWheel</object-name>
