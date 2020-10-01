@@ -79,7 +79,7 @@ This tutorial will take you through that process.
             <value>3</value>
         </set>
         <set>
-            <property>/controls/engines/current-engine/throttle</property>
+            <property>/controls/engines/engine[0]/throttle</property>
             <value>0.2</value>
         </set>
         <set>
@@ -116,7 +116,7 @@ This tutorial will take you through that process.
         </set>
         <nasal>
             <script>
-                setprop("/controls/engines/current-engine/mixture", 1.0);
+                setprop("/controls/engines/engine[0]/mixture", 1.0);
                 setprop("/controls/switches/starter", 1);
             </script>
         </nasal>
@@ -218,11 +218,11 @@ This tutorial will take you through that process.
             <value>true</value>
         </set>
         <set>
-            <property>/controls/engines/current-engine/throttle</property>
+            <property>/controls/engines/engine[0]/throttle</property>
             <value>0.2</value>
         </set>
         <set>
-            <property>/controls/engines/current-engine/mixture</property>
+            <property>/controls/engines/engine[0]/mixture</property>
             <value>1</value>
         </set>
         <set>
@@ -392,7 +392,7 @@ This tutorial will take you through that process.
             <message>To stop the engine, you have to pull the mixture lever full out.</message>
             <condition>
                 <greater-than>
-                    <property>/controls/engines/current-engine/mixture</property>
+                    <property>/controls/engines/engine[0]/mixture</property>
                     <value>0</value>
                 </greater-than>
             </condition>
@@ -400,7 +400,7 @@ This tutorial will take you through that process.
         <exit>
             <condition>
                 <equals>
-                    <property>/controls/engines/current-engine/mixture</property>
+                    <property>/controls/engines/engine[0]/mixture</property>
                     <value>0</value>
                 </equals>
             </condition>

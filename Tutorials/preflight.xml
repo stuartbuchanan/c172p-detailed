@@ -122,7 +122,7 @@ This tutorial will guide you through the Preflight inspection
             <value>0</value>
         </set>
         <set>
-            <property>/controls/engines/current-engine/throttle</property>
+            <property>/controls/engines/engine[0]/throttle</property>
             <value>0</value>
         </set>
         <set>
@@ -222,7 +222,7 @@ This tutorial will guide you through the Preflight inspection
             <value>0</value>
         </set>
         <set>
-            <property>/controls/engines/current-engine/throttle</property>
+            <property>/controls/engines/engine[0]/throttle</property>
             <value>0</value>
         </set>
         <set>

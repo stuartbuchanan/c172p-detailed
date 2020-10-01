@@ -553,9 +553,9 @@
 
         <!-- TODO To be made MP properties in the future when we get passengers or dual-control -->
         <controls>
-            <throttle>/controls/engines/current-engine/throttle</throttle>
+            <throttle>/controls/engines/engine[0]/throttle</throttle>
             <altstaticair>/controls/engines/current-engine/altstaticair</altstaticair>
-            <mixture>/controls/engines/current-engine/mixture</mixture>
+            <mixture>/controls/engines/engine[0]/mixture</mixture>
             <carb-heat>/controls/engines/current-engine/carb-heat</carb-heat>
             <parking-lever>/sim/model/c172p/cockpit/parking-lever</parking-lever>
             <carb-heat-animation>/sim/model/c172p/cockpit/carb-heat-animation</carb-heat-animation>
@@ -5122,7 +5122,7 @@
         <action>
             <binding>
                 <command>property-adjust</command>
-                <property>/controls/engines/current-engine/throttle</property>
+                <property>/controls/engines/engine[0]/throttle</property>
                 <factor>0.02</factor>
                 <min>0</min>
                 <max>1</max>
@@ -5199,7 +5199,7 @@
         <action>
             <binding>
                 <command>property-adjust</command>
-                <property>controls/engines/current-engine/mixture</property>
+                <property>controls/engines/engine[0]/mixture</property>
                 <factor>0.02</factor>
                 <min>0</min>
                 <max>1</max>

@@ -50,9 +50,9 @@ var save_state = func {
     setprop("/save/tank1-level-lbs", tank1);
     setprop("/save/tank2-level-lbs", tank2);
 
-    var throttle = getprop("/controls/engines/current-engine/throttle");
+    var throttle = getprop("/controls/engines/engine[0]/throttle");
     setprop("/save/throttle", throttle);
-    var mixture = getprop("/controls/engines/current-engine/mixture");
+    var mixture = getprop("/controls/engines/engine[0]/mixture");
     setprop("/save/mixture", mixture);
     var primlever = getprop("/controls/engines/engine[0]/primer-lever");
     setprop("/save/primlever", primlever);
@@ -293,9 +293,9 @@ var resume_state = func {
         setprop("/consumables/fuel/tank[1]/level-lbs", tank2);
 
         var throttle = getprop("/save/throttle");
-        setprop("/controls/engines/current-engine/throttle", throttle);
+        setprop("/controls/engines/engine[0]/throttle", throttle);
         var mixture = getprop("/save/mixture");
-        setprop("/controls/engines/current-engine/mixture", mixture);
+        setprop("/controls/engines/engine[0]/mixture", mixture);
         var primlever = getprop("/save/primlever");
         setprop("/controls/engines/engine[0]/primer-lever", primlever);
 

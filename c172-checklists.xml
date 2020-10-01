@@ -657,18 +657,18 @@
             <condition>
                 <and>
                     <greater-than>
-                        <property>/controls/engines/current-engine/throttle</property>
+                        <property>/controls/engines/engine[0]/throttle</property>
                         <value>0.1</value>
                     </greater-than>
                     <less-than>
-                        <property>/controls/engines/current-engine/throttle</property>
+                        <property>/controls/engines/engine[0]/throttle</property>
                         <value>0.4</value>
                     </less-than>
                 </and>
             </condition>
             <binding>
                 <command>property-interpolate</command>
-                <property>/controls/engines/current-engine/throttle</property>
+                <property>/controls/engines/engine[0]/throttle</property>
                 <value>0.25</value>
                 <rate>0.2</rate>
             </binding>
@@ -684,13 +684,13 @@
             </marker>
             <condition>
                 <greater-than>
-                    <property>/controls/engines/current-engine/mixture</property>
+                    <property>/controls/engines/engine[0]/mixture</property>
                     <value>0.9</value>
                 </greater-than>
             </condition>
             <binding>
                 <command>property-interpolate</command>
-                <property>/controls/engines/current-engine/mixture</property>
+                <property>/controls/engines/engine[0]/mixture</property>
                 <value>1.0</value>
                 <rate>0.5</rate>
             </binding>
@@ -939,13 +939,13 @@
                 </marker>
                 <condition>
                     <greater-than>
-                        <property>/controls/engines/current-engine/mixture</property>
+                        <property>/controls/engines/engine[0]/mixture</property>
                         <value>0.9</value>
                     </greater-than>
                 </condition>
                 <binding>
                     <command>property-interpolate</command>
-                    <property>/controls/engines/current-engine/mixture</property>
+                    <property>/controls/engines/engine[0]/mixture</property>
                     <value>1.0</value>
                     <rate>0.5</rate>
                 </binding>
@@ -1033,7 +1033,7 @@
                 </condition>
                 <binding>
                     <command>property-interpolate</command>
-                    <property>/controls/engines/current-engine/throttle</property>
+                    <property>/controls/engines/engine[0]/throttle</property>
                     <value>0.69</value>
                     <time>1.0</time>
                 </binding>
@@ -1098,7 +1098,7 @@
                 </condition>
                 <binding>
                     <command>property-interpolate</command>
-                    <property>/controls/engines/current-engine/throttle</property>
+                    <property>/controls/engines/engine[0]/throttle</property>
                     <value>0.1</value>
                     <time>1.0</time>
                 </binding>
@@ -1278,13 +1278,13 @@
             </marker>
             <condition>
                 <greater-than>
-                    <property>/controls/engines/current-engine/mixture</property>
+                    <property>/controls/engines/engine[0]/mixture</property>
                     <value>0.9</value>
                 </greater-than>
             </condition>
             <binding>
                 <command>property-interpolate</command>
-                <property>/controls/engines/current-engine/mixture</property>
+                <property>/controls/engines/engine[0]/mixture</property>
                 <value>1.0</value>
                 <time>1.0</time>
             </binding>
@@ -1300,13 +1300,13 @@
             </marker>
             <condition>
                 <greater-than>
-                    <property>/controls/engines/current-engine/throttle</property>
+                    <property>/controls/engines/engine[0]/throttle</property>
                     <value>0.95</value>
                 </greater-than>
             </condition>
             <binding>
                 <command>property-interpolate</command>
-                <property>/controls/engines/current-engine/throttle</property>
+                <property>/controls/engines/engine[0]/throttle</property>
                 <value>1.0</value>
                 <time>2.0</time>
             </binding>
@@ -1401,13 +1401,13 @@
             </marker>
             <condition>
                 <greater-than>
-                    <property>/controls/engines/current-engine/throttle</property>
+                    <property>/controls/engines/engine[0]/throttle</property>
                     <value>0.95</value>
                 </greater-than>
             </condition>
             <binding>
                 <command>property-interpolate</command>
-                <property>/controls/engines/current-engine/throttle</property>
+                <property>/controls/engines/engine[0]/throttle</property>
                 <value>1.0</value>
                 <time>2.0</time>
             </binding>
@@ -1424,13 +1424,13 @@
             </marker>
             <condition>
                 <greater-than>
-                    <property>/controls/engines/current-engine/mixture</property>
+                    <property>/controls/engines/engine[0]/mixture</property>
                     <value>0.9</value>
                 </greater-than>
             </condition>
             <binding>
                 <command>property-interpolate</command>
-                <property>/controls/engines/current-engine/mixture</property>
+                <property>/controls/engines/engine[0]/mixture</property>
                 <value>1.0</value>
                 <time>1.0</time>
             </binding>
@@ -1555,13 +1555,13 @@
             </marker>
             <condition>
                 <greater-than>
-                    <property>/controls/engines/current-engine/mixture</property>
+                    <property>/controls/engines/engine[0]/mixture</property>
                     <value>0.9</value>
                 </greater-than>
             </condition>
             <binding>
                 <command>property-interpolate</command>
-                <property>/controls/engines/current-engine/mixture</property>
+                <property>/controls/engines/engine[0]/mixture</property>
                 <value>1.0</value>
                 <time>1.0</time>
             </binding>
@@ -1593,13 +1593,13 @@
             </marker>
             <condition>
                 <greater-than>
-                    <property>/controls/engines/current-engine/throttle</property>
+                    <property>/controls/engines/engine[0]/throttle</property>
                     <value>0.95</value>
                 </greater-than>
             </condition>
             <binding>
                 <command>property-interpolate</command>
-                <property>/controls/engines/current-engine/throttle</property>
+                <property>/controls/engines/engine[0]/throttle</property>
                 <value>1.0</value>
                 <time>2.0</time>
             </binding>
@@ -1691,7 +1691,7 @@
             </marker>
             <condition>
                 <greater-than>
-                    <property>/controls/engines/current-engine/throttle</property>
+                    <property>/controls/engines/engine[0]/throttle</property>
                     <value>0.95</value>
                 </greater-than>
             </condition>
@@ -1708,7 +1708,7 @@
             </marker>
             <condition>
                 <greater-than>
-                    <property>/controls/engines/current-engine/mixture</property>
+                    <property>/controls/engines/engine[0]/mixture</property>
                     <value>0.9</value>
                 </greater-than>
             </condition>
@@ -2001,7 +2001,7 @@
             </marker>
             <condition>
                 <greater-than>
-                    <property>/controls/engines/current-engine/mixture</property>
+                    <property>/controls/engines/engine[0]/mixture</property>
                     <value>0.9</value>
                 </greater-than>
             </condition>
@@ -2200,7 +2200,7 @@
             </marker>
             <condition>
                 <less-than>
-                    <property>/controls/engines/current-engine/throttle</property>
+                    <property>/controls/engines/engine[0]/throttle</property>
                     <value>0.05</value>
                 </less-than>
             </condition>
@@ -2348,7 +2348,7 @@
             </marker>
             <condition>
                 <greater-than>
-                    <property>/controls/engines/current-engine/throttle</property>
+                    <property>/controls/engines/engine[0]/throttle</property>
                     <value>0.95</value>
                 </greater-than>
             </condition>
@@ -2618,7 +2618,7 @@
             </marker>
             <condition>
                 <less-than>
-                    <property>/controls/engines/current-engine/mixture</property>
+                    <property>/controls/engines/engine[0]/mixture</property>
                     <value>0.05</value>
                 </less-than>
             </condition>
@@ -2905,13 +2905,13 @@
             </marker>
             <condition>
                 <equals>
-                    <property>/controls/engines/current-engine/throttle</property>
+                    <property>/controls/engines/engine[0]/throttle</property>
                     <value>0</value>
                 </equals>
             </condition>
             <binding>
                 <command>property-interpolate</command>
-                <property>/controls/engines/current-engine/throttle</property>
+                <property>/controls/engines/engine[0]/throttle</property>
                 <value>0</value>
                 <time>0.5</time>
             </binding>
@@ -2964,13 +2964,13 @@
             </marker>
             <condition>
                 <equals>
-                    <property>/controls/engines/current-engine/mixture</property>
+                    <property>/controls/engines/engine[0]/mixture</property>
                     <value>0</value>
                 </equals>
             </condition>
             <binding>
                 <command>property-interpolate</command>
-                <property>/controls/engines/current-engine/mixture</property>
+                <property>/controls/engines/engine[0]/mixture</property>
                 <value>0</value>
                 <time>0.5</time>
             </binding>
@@ -3053,13 +3053,13 @@
             </marker>
             <condition>
                 <equals>
-                    <property>/controls/engines/current-engine/mixture</property>
+                    <property>/controls/engines/engine[0]/mixture</property>
                     <value>0</value>
                 </equals>
             </condition>
             <binding>
                 <command>property-interpolate</command>
-                <property>/controls/engines/current-engine/mixture</property>
+                <property>/controls/engines/engine[0]/mixture</property>
                 <value>0</value>
                 <time>0.5</time>
             </binding>
@@ -3237,13 +3237,13 @@
             </marker>
             <condition>
                 <equals>
-                    <property>/controls/engines/current-engine/mixture</property>
+                    <property>/controls/engines/engine[0]/mixture</property>
                     <value>1</value>
                 </equals>
             </condition>
             <binding>
                 <command>property-interpolate</command>
-                <property>/controls/engines/current-engine/mixture</property>
+                <property>/controls/engines/engine[0]/mixture</property>
                 <value>1</value>
                 <time>0.5</time>
             </binding>
@@ -3339,13 +3339,13 @@
             </marker>
             <condition>
                 <equals>
-                    <property>/controls/engines/current-engine/mixture</property>
+                    <property>/controls/engines/engine[0]/mixture</property>
                     <value>0</value>
                 </equals>
             </condition>
             <binding>
                 <command>property-interpolate</command>
-                <property>/controls/engines/current-engine/mixture</property>
+                <property>/controls/engines/engine[0]/mixture</property>
                 <value>0</value>
                 <time>0.5</time>
             </binding>

@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+
+<!-- Control mapping to handle multiple engine definitions -->
+<!-- The user will set                                     --> 
+<!-- /controls/engines/engine[0]/throttle                   -->
+<!-- /controls/engines/engine[0]/mixture                   -->
+
+<!-- These are then mapped to the JSBSim engine controls  -->
+<!-- /fdm/jsbsim/fcs/throttle-pos-norm[0] -->
+<!-- /fdm/jsbsim/fcs/throttle-pos-norm[1] -->
+<!-- /fdm/jsbsim/fcs/mixture-pos-norm[0] -->
+<!-- /fdm/jsbsim/fcs/mixture-pos-norm[1] -->
+
+<PropertyList>
+
+    <!-- ============================================================== -->
+    <!-- Throttle                                                       -->
+    <!-- ============================================================== -->
+
+    <filter>
+        <name>Engine 180 HP Throttle</name>
+        <type>gain</type>
+        <input>
+            <condition>
+                <equals>
+                    <property>/controls/engines/active-engine</property>
+                    <value>1</value>
+                </equals>
+            </condition>
+            <property>/controls/engines/engine[0]/throttle</property>
+        </input>
+        <input>
+            <value>0.0</value>
+        </input>
+        <output>/controls/engines/engine[1]/throttle</output>
+    </filter>
+
+    <filter>
+        <name>Engine 160 HP Throttle</name>
+        <type>gain</type>
+        <input>
+            <condition>
+                <equals>
+                    <property>/controls/engines/active-engine</property>
+                    <value>0</value>
+                </equals>
+            </condition>
+            <property>/controls/engines/engine[0]/throttle</property>
+        </input>
+        <input>
+            <value>0.0</value>
+        </input>
+        <output>/controls/engines/engine[0]/throttle</output>
+    </filter>
+
+
+    <!-- ============================================================== -->
+    <!-- Mixture                                                        -->
+    <!-- ============================================================== -->
+
+    <filter>
+        <name>Engine 160 HP Mixture</name>
+        <type>gain</type>
+        <input>
+            <condition>
+                <equals>
+                    <property>/controls/engines/active-engine</property>
+                    <value>0</value>
+                </equals>
+            </condition>
+            <property>/controls/engines/engine[0]/mixture</property>
+        </input>
+        <input>
+            <value>0.0</value>
+        </input>
+        <output>/fdm/jsbsim/fcs/mixture-pos-norm[0]</output>
+    </filter>
+
+    <filter>
+        <name>Engine 180 HP Mixture</name>
+        <type>gain</type>
+        <input>
+            <condition>
+                <equals>
+                    <property>/controls/engines/active-engine</property>
+                    <value>1</value>
+                </equals>
+            </condition>
+            <property>/controls/engines/engine[0]/mixture</property>
+        </input>
+        <input>
+            <value>0.0</value>
+        </input>
+        <output>/fdm/jsbsim/fcs/mixture-pos-norm[1]</output>
+    </filter>
+</PropertyList>

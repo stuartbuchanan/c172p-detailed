@@ -54,7 +54,7 @@ This tutorial will take you through starting the Cessna 172p.
             <value>0</value>
         </set>
         <set>
-            <property>/controls/engines/current-engine/throttle</property>
+            <property>/controls/engines/engine[0]/throttle</property>
             <value>0.0</value>
         </set>
         <set>
@@ -524,7 +524,7 @@ This tutorial will take you through starting the Cessna 172p.
             <message>Use the m key or mouse to select fuller mixture.</message>
             <condition>
                 <less-than>
-                    <property>/controls/engines/current-engine/mixture</property>
+                    <property>/controls/engines/engine[0]/mixture</property>
                     <value>0.85</value>
                 </less-than>
             </condition>
@@ -533,7 +533,7 @@ This tutorial will take you through starting the Cessna 172p.
         <exit>
             <condition>
                 <greater-than>
-                    <property>/controls/engines/current-engine/mixture</property>
+                    <property>/controls/engines/engine[0]/mixture</property>
                     <value>0.85</value>
                 </greater-than>
             </condition>
@@ -564,7 +564,7 @@ This tutorial will take you through starting the Cessna 172p.
             <message>Open the throttle a bit more.</message>
             <condition>
                 <less-than>
-                    <property>/controls/engines/current-engine/throttle</property>
+                    <property>/controls/engines/engine[0]/throttle</property>
                     <value>0.15</value>
                 </less-than>
             </condition>
@@ -574,7 +574,7 @@ This tutorial will take you through starting the Cessna 172p.
             <message>That's a bit too much - pull it out slightly.</message>
             <condition>
                 <greater-than>
-                    <property>/controls/engines/current-engine/throttle</property>
+                    <property>/controls/engines/engine[0]/throttle</property>
                     <value>0.25</value>
                 </greater-than>
             </condition>
@@ -584,11 +584,11 @@ This tutorial will take you through starting the Cessna 172p.
             <condition>
                 <and>
                     <greater-than-equals>
-                        <property>/controls/engines/current-engine/throttle</property>
+                        <property>/controls/engines/engine[0]/throttle</property>
                         <value>0.15</value>
                     </greater-than-equals>
                     <less-than-equals>
-                        <property>/controls/engines/current-engine/throttle</property>
+                        <property>/controls/engines/engine[0]/throttle</property>
                         <value>0.25</value>
                     </less-than-equals>
                 </and>

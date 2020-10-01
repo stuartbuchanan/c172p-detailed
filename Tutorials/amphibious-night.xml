@@ -103,7 +103,7 @@ Pay attention to the heading bug on taxiing it will approximate the threshold po
             <value>0</value>
         </set>
         <set>
-            <property>/controls/engines/current-engine/throttle</property>
+            <property>/controls/engines/engine[0]/throttle</property>
             <value>0.0</value>
         </set>
         <set>
@@ -645,7 +645,7 @@ Pay attention to the heading bug on taxiing it will approximate the threshold po
             <message>Apply full throttle for takeoff.</message>
             <condition>
                 <less-than>
-                    <property>/controls/engines/current-engine/throttle</property>
+                    <property>/controls/engines/engine[0]/throttle</property>
                     <value>0.95</value>
                 </less-than>
             </condition>
@@ -928,7 +928,7 @@ Pay attention to the heading bug on taxiing it will approximate the threshold po
             <message>Check throttle.</message>
             <condition>
                 <greater-than>
-                    <property>/controls/engines/current-engine/throttle</property>
+                    <property>/controls/engines/engine[0]/throttle</property>
                     <value>0.85</value>
                 </greater-than>
             </condition>
@@ -953,7 +953,7 @@ Pay attention to the heading bug on taxiing it will approximate the threshold po
             <condition>
                 <and>
                     <less-than>
-                        <property>/controls/engines/current-engine/throttle</property>
+                        <property>/controls/engines/engine[0]/throttle</property>
                         <value>0.9</value>
                     </less-than>
                     <greater-than>
@@ -1028,7 +1028,7 @@ Pay attention to the heading bug on taxiing it will approximate the threshold po
             <message>Apply full throttle for takeoff.</message>
             <condition>
                 <less-than>
-                    <property>/controls/engines/current-engine/throttle</property>
+                    <property>/controls/engines/engine[0]/throttle</property>
                     <value>0.95</value>
                 </less-than>
             </condition>
@@ -1264,7 +1264,7 @@ Pay attention to the heading bug on taxiing it will approximate the threshold po
             <message>Check throttle.</message>
             <condition>
                 <greater-than>
-                    <property>/controls/engines/current-engine/throttle</property>
+                    <property>/controls/engines/engine[0]/throttle</property>
                     <value>0.85</value>
                 </greater-than>
             </condition>
@@ -1289,7 +1289,7 @@ Pay attention to the heading bug on taxiing it will approximate the threshold po
             <condition>
                 <and>
                     <less-than>
-                        <property>/controls/engines/current-engine/throttle</property>
+                        <property>/controls/engines/engine[0]/throttle</property>
                         <value>0.9</value>
                     </less-than>
                     <greater-than>
@@ -1349,7 +1349,7 @@ Pay attention to the heading bug on taxiing it will approximate the threshold po
             <message>Check throttle.</message>
             <condition>
                 <greater-than>
-                    <property>/controls/engines/current-engine/throttle</property>
+                    <property>/controls/engines/engine[0]/throttle</property>
                     <value>0.65</value>
                 </greater-than>
             </condition>

@@ -78,7 +78,7 @@ For more information on the before takeoff checklist, see Section 2-11 of the FA
             <value>3</value>
         </set>
         <set>
-            <property>/controls/engines/current-engine/throttle</property>
+            <property>/controls/engines/engine[0]/throttle</property>
             <value>0.2</value>
         </set>
         <set>
@@ -119,7 +119,7 @@ For more information on the before takeoff checklist, see Section 2-11 of the FA
         </set>
         <nasal>
             <script>
-                setprop("/controls/engines/current-engine/mixture", 1.0);
+                setprop("/controls/engines/engine[0]/mixture", 1.0);
                 setprop("/controls/switches/starter", 1);
             </script>
         </nasal>
@@ -277,7 +277,7 @@ and that the aircraft has been rigged correctly.</message>
             <message>The mixture isn't completely in. Press m to richen the mixture to fully rich.</message>
             <condition>
                 <less-than>
-                    <property>/controls/engines/current-engine/mixture</property>
+                    <property>/controls/engines/engine[0]/mixture</property>
                     <value>0.99</value>
                 </less-than>
             </condition>

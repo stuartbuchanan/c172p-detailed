@@ -997,7 +997,7 @@
                 <function>
                     <table>
                         <independentVar lookup="row">/controls/engines/engine/primer</independentVar>
-                        <independentVar lookup="column">/controls/engines/current-engine/throttle</independentVar>
+                        <independentVar lookup="column">/controls/engines/engine[0]/throttle</independentVar>
                         <tableData>
                                  0.09    0.1    0.5    0.51
                             2    0       0      0      0
@@ -1031,19 +1031,7 @@
                 <test logic="AND" value="fcs/mixture-primer[0]">
                     /controls/engines/engine/use-primer eq 1
                     /engines/engine[0]/oil-temperature-degf le 75
-                </test>
-            </switch>
-
-            <!-- Primer logic for 180 HP engine -->
-            <switch name="Mixture Position 180 HP">
-                <default value="fcs/mixture-cmd-norm[1]"/>
-                <output>fcs/mixture-pos-norm[1]</output>
-                <!-- Use primer if used and engine is cold. If engine
-                     is warm, then the mixture lever is used.
-                -->
-                <test logic="AND" value="fcs/mixture-primer[1]">
-                    /controls/engines/engine/use-primer eq 1
-                    /engines/engine[1]/oil-temperature-degf le 75
+                    /controls/engines/active-engine eq 0
                 </test>
             </switch>
         </channel>
